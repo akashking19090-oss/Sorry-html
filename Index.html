@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flirting Mood 😘</title>
+
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  overflow:hidden;
+}
+
+.slider{
+  display:flex;
+  width:300vw;
+  height:100vh;
+  transition:0.6s ease;
+}
+
+.page{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:25px;
+}
+
+h1{
+  font-size:2.2rem;
+  margin-bottom:15px;
+}
+
+p{
+  font-size:1.3rem;
+  max-width:320px;
+}
+
+.next-btn{
+  margin-top:30px;
+  background:white;
+  color:#ff4d6d;
+  border:none;
+  padding:12px 26px;
+  border-radius:30px;
+  font-size:1.1rem;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="slider" id="slider">
+
+  <div class="page">
+    <h1>🙈 Hey You</h1>
+    <p>রাগ করে থেকো না…  
+       তোমার রাগও আমার কাছে cute লাগে 💖</p>
+    <button class="next-btn" onclick="next()">Next Page ➡</button>
+  </div>
+
+  <div class="page">
+    <h1>😌 Smile Please</h1>
+    <p>একটা হাসি দিলে জানো?  
+       আমার সব tension উধাও হয়ে যায় ✨</p>
+    <button class="next-btn" onclick="next()">Next Page ➡</button>
+  </div>
+
+  <div class="page">
+    <h1>😏 Oii Suno</h1>
+    <p>এখন তো আর রাগ নেই…  
+       তাহলে একটু কাছে আসা যায় নাকি? 💞</p>
+    <button class="next-btn" onclick="restart()">Again 🔁</button>
+  </div>
+
+</div>
+
+<script>
+let i = 0;
+const slider = document.getElementById("slider");
+
+function next(){
+  if(i < 2){
+    i++;
+    slider.style.transform = `translateX(-${i*100}vw)`;
+  }
+}
+
+function restart(){
+  i = 0;
+  slider.style.transform = "translateX(0)";
+}
+</script>
+
+</body>
+</html>
